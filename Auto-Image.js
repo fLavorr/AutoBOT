@@ -1033,13 +1033,17 @@
         stopBtn.disabled = true;
         
         if (!state.stopFlag) {
-          startBtn.disabled = true;
-          uploadBtn.disabled = false;
-          selectPosBtn.disabled = false;
-          resizeBtn.disabled = false;
-        } else {
-          startBtn.disabled = false;
-        }
+  startBtn.disabled = false;
+  uploadBtn.disabled = false;
+  selectPosBtn.disabled = false;
+  resizeBtn.disabled = false;
+
+  // resetar progresso para repetir
+  state.paintedPixels = 0;
+  state.lastPosition = { x: 0, y: 0 };
+}
+
+
       }
     });
     
